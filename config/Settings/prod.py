@@ -17,6 +17,9 @@ STORAGES = {
     },
 }
 
+# Avoid hard failures if a manifest entry is missing; serve the original path instead.
+WHITENOISE_MANIFEST_STRICT = False
+
 # Persistent DB connections
 CONN_MAX_AGE = 60
 

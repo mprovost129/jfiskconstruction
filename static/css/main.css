@@ -104,10 +104,9 @@ main {
    ============================================================================= */
 
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-                url('/static/images/hero.jpg') center/cover no-repeat;
+    background: linear-gradient(140deg, rgba(30,30,30,0.92), rgba(200,134,10,0.78));
     min-height: 420px;
-    background-color: #1e1e1e; /* fallback if image missing */
+    background-color: #1e1e1e;
 }
 
 /* =============================================================================
