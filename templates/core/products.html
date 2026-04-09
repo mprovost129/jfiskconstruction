@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Products — J. Fisk Construction{% endblock %}
+{% block meta_description %}J. Fisk Construction offers processed gravel, screened loam, and stone for delivery in the Seekonk, MA area.{% endblock %}
+
+{% block content %}
+
+<section class="bg-dark text-white py-5">
+    <div class="container">
+        <h1 class="fw-bold">Products</h1>
+        <p class="lead text-secondary">Quality materials available for delivery.</p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="bi bi-circle-fill fs-2 text-secondary mb-3 d-block"></i>
+                        <h3 class="card-title h5 fw-bold">Processed Gravel</h3>
+                        <p class="card-text text-muted">[Placeholder — add description, sizing options, typical uses (driveways, drainage, base material), pricing or ordering info.]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="bi bi-tree-fill fs-2 text-success mb-3 d-block"></i>
+                        <h3 class="card-title h5 fw-bold">Screened Loam</h3>
+                        <p class="card-text text-muted">[Placeholder — add description, typical uses (loam grading, landscaping, fill), available quantities, etc.]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="bi bi-pentagon-fill fs-2 text-warning mb-3 d-block"></i>
+                        <h3 class="card-title h5 fw-bold">Stone</h3>
+                        <p class="card-text text-muted">[Placeholder — add description, stone types/sizes available, typical uses (landscaping, walls, drainage), etc.]</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-4">
+    <div class="container text-center">
+        <p class="mb-2 text-muted">Ready to order or have questions about our materials?</p>
+        <a href="{% url 'core:contact' %}" class="btn btn-warning">Contact Us</a>
+    </div>
+</section>
+
+{% endblock %}
