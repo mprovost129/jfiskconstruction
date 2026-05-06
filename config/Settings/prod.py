@@ -35,6 +35,9 @@ CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', '').split(',')
 # Uses LocMemCache from base.py — sufficient for a low-traffic marketing site
 
 # HTTPS / security
+# Trust Render's (and most reverse proxies') forwarded-proto header so Django
+# knows the original request was HTTPS and does not issue an infinite redirect.
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
