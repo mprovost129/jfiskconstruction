@@ -1,9 +1,16 @@
 import os
+from django.core.exceptions import ImproperlyConfigured
 from .base import *
 
 DEBUG = False
 
 ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(',')
+
+# Fail fast if no database is configured
+if not os.environ.get('DATABASE_URL') and not os.environ.get('DB_HOST'):
+    raise ImproperlyConfigured(
+        'Production requires either DATABASE_URL or DB_HOST to be set.'
+    )
 
 # Whitenoise — insert after SecurityMiddleware
 MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
