@@ -43,6 +43,11 @@
                             <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
                                href="{% url 'core:contact' %}">Contact</a>
                         </li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-warning text-dark fw-bold px-3 py-2" href="tel:5083998570">
+                                <i class="bi bi-telephone-fill me-1"></i>(508) 399-8570
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -71,12 +76,17 @@
                     <h5 class="fw-bold">J. Fisk Construction</h5>
                     <p class="mb-0 text-secondary">Quality excavation and materials<br>serving the Seekonk area.</p>
                 </div>
-                <div class="col-md-4 mb-3 mb-md-0">
+                <div class="col-md-3 mb-3 mb-md-0">
                     <h6 class="fw-semibold">Contact</h6>
                     <p class="mb-1"><i class="bi bi-telephone me-2"></i><a href="tel:5083998570" class="text-light text-decoration-none">(508) 399-8570</a></p>
                     <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>72 Pond Street, Seekonk, MA 02771</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h6 class="fw-semibold">Hours</h6>
+                    <p class="mb-1 text-secondary small">Mon – Fri: 7:00 am – 3:30 pm</p>
+                    <p class="mb-0 text-secondary small">Saturday: 7:00 am – 12:00 pm</p>
+                </div>
+                <div class="col-md-2">
                     <h6 class="fw-semibold">Quick Links</h6>
                     <ul class="list-unstyled mb-0">
                         <li><a href="{% url 'core:products' %}" class="text-secondary text-decoration-none">Products</a></li>

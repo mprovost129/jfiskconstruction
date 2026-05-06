@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Home — J. Fisk Construction{% endblock %}
 {% block meta_description %}J. Fisk Construction provides excavation, earth removal, and quality gravel products in Seekonk, MA.{% endblock %}
@@ -6,11 +7,15 @@
 {% block content %}
 
 <!-- Hero -->
-<section class="hero-section text-white text-center d-flex align-items-center">
+<section class="hero-section text-white text-center d-flex align-items-center"
+         style="background-image: url('{% static 'images/j_fisk_construction_background.jpg' %}');">
     <div class="container py-5">
+        <p class="text-warning fw-bold text-uppercase mb-2" style="letter-spacing: 0.12em; font-size: 1rem;">Serving MA &amp; RI Contractors</p>
         <h1 class="display-4 fw-bold">J. Fisk Construction</h1>
         <p class="lead mb-4">Excavation, Earth Removal &amp; Quality Materials — Seekonk, MA</p>
-        <a href="{% url 'core:contact' %}" class="btn btn-warning btn-lg me-2">Get in Touch</a>
+        <a href="tel:5083998570" class="btn btn-call-order btn-lg me-2">
+            <i class="bi bi-telephone-fill me-2"></i>Call to Order
+        </a>
         <a href="{% url 'core:services' %}" class="btn btn-outline-light btn-lg">Our Services</a>
     </div>
 </section>

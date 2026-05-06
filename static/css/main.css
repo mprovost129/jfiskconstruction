@@ -104,9 +104,57 @@ main {
    ============================================================================= */
 
 .hero-section {
-    background: linear-gradient(140deg, rgba(30,30,30,0.92), rgba(200,134,10,0.78));
-    min-height: 420px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #1e1e1e;
+    min-height: 480px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-call-order {
+    background-color: #c8860a;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: none;
+}
+
+.btn-call-order:hover,
+.btn-call-order:focus {
+    background-color: #a06d08;
+    color: #fff;
+}
+
+.product-card-img {
+    height: 200px;
+    background-color: #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-size: 0.85rem;
+    border-radius: 0.375rem 0.375rem 0 0;
+    overflow: hidden;
+}
+
+.product-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* =============================================================================
