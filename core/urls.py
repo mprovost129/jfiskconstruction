@@ -5,6 +5,8 @@ from . import views
 app_name = 'core'
 
 urlpatterns = [
+    path('robots.txt', views.robots_txt, name='robots_txt'),
+    path('sitemap.xml', views.sitemap_xml, name='sitemap_xml'),
     path('', views.HomeView.as_view(), name='home'),
     path('products/', views.ProductsView.as_view(), name='products'),
     path('services/', views.ServicesView.as_view(), name='services'),

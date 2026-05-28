@@ -1,15 +1,97 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Products - J. Fisk Construction{% endblock %}
-{% block meta_description %}J. Fisk Construction offers processed gravel, screened loam, and stone for delivery in the Seekonk, MA area.{% endblock %}
+{% block title %}Gravel, Screened Loam, Stone & Millings in Seekonk, MA | J. Fisk Construction{% endblock %}
+{% block meta_description %}Order processed gravel, screened loam, stone, and screened millings from J. Fisk Construction in Seekonk, MA with local delivery available.{% endblock %}
+{% block og_title %}Gravel, Screened Loam, Stone & Millings in Seekonk, MA | J. Fisk Construction{% endblock %}
+{% block og_description %}Order processed gravel, screened loam, stone, and screened millings from J. Fisk Construction in Seekonk, MA with local delivery available.{% endblock %}
+{% block twitter_title %}Gravel, Screened Loam, Stone & Millings in Seekonk, MA | J. Fisk Construction{% endblock %}
+{% block twitter_description %}Order processed gravel, screened loam, stone, and screened millings from J. Fisk Construction in Seekonk, MA with local delivery available.{% endblock %}
+{% block extra_schema %}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "OfferCatalog",
+        "name": "J. Fisk Construction materials catalog",
+        "url": "{{ canonical_url }}",
+        "itemListElement": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Screened Loam"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "3/4 Dense Grade Process Gravel"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Stone"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Screened Millings"
+                }
+            }
+        ]
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Do you offer local delivery for gravel, loam, and stone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. J. Fisk Construction offers local delivery of gravel, screened loam, stone, and screened millings for projects in Seekonk and nearby Massachusetts and Rhode Island communities."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What materials can I order from J. Fisk Construction?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Available materials include screened loam, 3/4 dense grade process gravel, stone, and screened millings for driveway, grading, drainage, and landscaping work."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I place a materials order?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Call J. Fisk Construction at (508) 399-8570 to discuss the material type, quantity, delivery timing, and your project location."
+                }
+            }
+        ]
+    }
+</script>
+{% endblock %}
 
 {% block content %}
 
 <section class="bg-dark text-white py-5">
     <div class="container">
-        <h1 class="fw-bold">Products</h1>
-        <p class="lead text-secondary">Quality materials available for delivery.</p>
+        <h1 class="fw-bold">Gravel, Screened Loam, Stone &amp; Millings</h1>
+        <p class="lead text-secondary">Quality construction and landscape materials available for pickup or local delivery from Seekonk, MA.</p>
+    </div>
+</section>
+
+<section class="py-4 border-bottom">
+    <div class="container">
+        <p class="mb-0 text-muted">We supply durable aggregate and landscape materials for driveways, grading, site prep, drainage work, lawns, and general construction projects across Southeastern Massachusetts and Rhode Island.</p>
     </div>
 </section>
 
@@ -20,7 +102,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="product-card-img">
-                        <img src="{% static 'images/screened_loam.jpg' %}" alt="Screened Loam">
+                        <img src="{% static 'images/screened_loam.jpg' %}" alt="Screened loam available from J. Fisk Construction in Seekonk, Massachusetts">
                     </div>
                     <div class="card-body p-4">
                         <h3 class="card-title h5 fw-bold">Screened Loam</h3>
@@ -42,7 +124,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="product-card-img">
-                        <img src="{% static 'images/processed_gravel.jpg' %}" alt="3/4&quot; Dense Grade Process Gravel">
+                        <img src="{% static 'images/processed_gravel.jpg' %}" alt="3/4 dense grade process gravel for driveways and construction base">
                     </div>
                     <div class="card-body p-4">
                         <h3 class="card-title h5 fw-bold">3/4" Dense Grade Process Gravel</h3>
@@ -65,7 +147,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="product-card-img">
-                        <img src="{% static 'images/stone.jpg' %}" alt="Stone">
+                        <img src="{% static 'images/stone.jpg' %}" alt="Bulk stone material for drainage, landscaping, and sitework">
                     </div>
                     <div class="card-body p-4">
                         <h3 class="card-title h5 fw-bold">Stone</h3>
@@ -88,7 +170,7 @@
             <div class="col-md-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="product-card-img">
-                        <img src="{% static 'images/screened_millings.jpg' %}" alt="Screened Millings">
+                        <img src="{% static 'images/screened_millings.jpg' %}" alt="Screened asphalt millings for driveways and surface applications">
                     </div>
                     <div class="card-body p-4">
                         <h3 class="card-title h5 fw-bold">Screened Millings</h3>
@@ -115,6 +197,28 @@
     <div class="container text-center">
         <p class="mb-2 text-muted">Ready to order or have questions about our materials?</p>
         <a href="{% url 'core:contact' %}" class="btn btn-warning">Contact Us</a>
+    </div>
+</section>
+
+<section class="py-5 border-top">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <h2 class="h3 fw-bold mb-4">Materials FAQ</h2>
+                <div class="mb-4">
+                    <h3 class="h5 fw-bold">Do you offer local delivery for gravel, loam, and stone?</h3>
+                    <p class="text-muted mb-0">Yes. J. Fisk Construction offers local delivery of gravel, screened loam, stone, and screened millings for projects in Seekonk and nearby Massachusetts and Rhode Island communities.</p>
+                </div>
+                <div class="mb-4">
+                    <h3 class="h5 fw-bold">What materials can I order from J. Fisk Construction?</h3>
+                    <p class="text-muted mb-0">Available materials include screened loam, 3/4 dense grade process gravel, stone, and screened millings for driveway, grading, drainage, and landscaping work.</p>
+                </div>
+                <div>
+                    <h3 class="h5 fw-bold">How do I place a materials order?</h3>
+                    <p class="text-muted mb-0">Call J. Fisk Construction at (508) 399-8570 to review the material type, quantity, delivery timing, and your project location.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

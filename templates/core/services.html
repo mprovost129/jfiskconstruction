@@ -1,14 +1,75 @@
 {% extends 'base.html' %}
 
-{% block title %}Services - J. Fisk Construction{% endblock %}
-{% block meta_description %}J. Fisk Construction offers earth removal, excavation, and product delivery in the Seekonk, MA area.{% endblock %}
+{% block title %}Excavation, Earth Removal & Material Delivery in Seekonk, MA | J. Fisk Construction{% endblock %}
+{% block meta_description %}J. Fisk Construction provides excavation, earth removal, grading, hauling, and material delivery in Seekonk, MA and nearby Rhode Island communities.{% endblock %}
+{% block og_title %}Excavation, Earth Removal & Material Delivery in Seekonk, MA | J. Fisk Construction{% endblock %}
+{% block og_description %}J. Fisk Construction provides excavation, earth removal, grading, hauling, and material delivery in Seekonk, MA and nearby Rhode Island communities.{% endblock %}
+{% block twitter_title %}Excavation, Earth Removal & Material Delivery in Seekonk, MA | J. Fisk Construction{% endblock %}
+{% block twitter_description %}J. Fisk Construction provides excavation, earth removal, grading, hauling, and material delivery in Seekonk, MA and nearby Rhode Island communities.{% endblock %}
+{% block extra_schema %}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Excavation, earth removal, and material delivery",
+        "serviceType": [
+            "Excavation",
+            "Earth removal",
+            "Material delivery"
+        ],
+        "provider": {
+            "@id": "{{ site_url }}#business"
+        },
+        "areaServed": [{% for area in service_areas %}"{{ area }}"{% if not forloop.last %}, {% endif %}{% endfor %}],
+        "url": "{{ canonical_url }}"
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What excavation services do you provide?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "J. Fisk Construction provides excavation, earth removal, grading, site preparation, foundation excavation, driveway base work, and delivery of aggregate materials."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you work on residential and commercial projects?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. J. Fisk Construction supports both residential and commercial projects throughout Seekonk and nearby Massachusetts and Rhode Island communities."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I request pricing for excavation or earth removal?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Call J. Fisk Construction at (508) 399-8570 to discuss the job scope, site conditions, timing, and delivery or hauling needs."
+                }
+            }
+        ]
+    }
+</script>
+{% endblock %}
 
 {% block content %}
 
 <section class="bg-dark text-white py-5">
     <div class="container">
-        <h1 class="fw-bold">Services</h1>
-        <p class="lead text-secondary">Professional excavation and hauling for residential and commercial projects.</p>
+        <h1 class="fw-bold">Excavation, Earth Removal &amp; Delivery Services</h1>
+        <p class="lead text-secondary">Professional sitework, hauling, grading, and aggregate delivery for residential and commercial projects.</p>
+    </div>
+</section>
+
+<section class="py-4 border-bottom">
+    <div class="container">
+        <p class="mb-0 text-muted">Our team supports contractors and property owners with dependable excavation services in Seekonk and nearby communities, including land clearing, foundation prep, removal of excess material, and delivery of stone, gravel, and loam.</p>
     </div>
 </section>
 
@@ -21,16 +82,15 @@
                     <div class="card-body p-4">
                         <i class="bi bi-arrow-up-circle fs-2 text-warning mb-3 d-block"></i>
                         <h3 class="card-title h5 fw-bold">Earth Removal</h3>
-                        <p class="card-text text-muted">
-                            <ul class="text-muted">
-                                <li>Site clearing and land preparation</li>
-                                <li>Removal of dirt, rock, gravel, and debris</li>
-                                <li>Rough and finish grading</li>
-                                <li>Lot leveling and foundation preparation</li>
-                                <li>Hauling and disposal of excess material</li>
-                                <li>Small and large volume earth moving projects</li>
-                            </ul>
-                        </p>
+                        <p class="card-text text-muted">Efficient removal and hauling for site prep, grading, and cleanup work.</p>
+                        <ul class="text-muted mb-0">
+                            <li>Site clearing and land preparation</li>
+                            <li>Removal of dirt, rock, gravel, and debris</li>
+                            <li>Rough and finish grading</li>
+                            <li>Lot leveling and foundation preparation</li>
+                            <li>Hauling and disposal of excess material</li>
+                            <li>Small and large volume earth moving projects</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -40,16 +100,15 @@
                     <div class="card-body p-4">
                         <i class="bi bi-building fs-2 text-warning mb-3 d-block"></i>
                         <h3 class="card-title h5 fw-bold">Excavation</h3>
-                        <p class="card-text text-muted">
-                            <ul class="text-muted">
-                                <li>Foundation excavation</li>
-                                <li>Pool and pond excavation</li>
-                                <li>Land clearing and site preparation</li>
-                                <li>Driveway and road base excavation</li>
-                                <li>Grading and leveling</li>
-                                <li>Demolition and debris removal</li>
-                            </ul>
-                        </p>
+                        <p class="card-text text-muted">Targeted excavation work for new construction, improvements, and site preparation.</p>
+                        <ul class="text-muted mb-0">
+                            <li>Foundation excavation</li>
+                            <li>Pool and pond excavation</li>
+                            <li>Land clearing and site preparation</li>
+                            <li>Driveway and road base excavation</li>
+                            <li>Grading and leveling</li>
+                            <li>Demolition and debris removal</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -59,16 +118,15 @@
                     <div class="card-body p-4">
                         <i class="bi bi-truck fs-2 text-warning mb-3 d-block"></i>
                         <h3 class="card-title h5 fw-bold">Delivery of Products</h3>
-                        <p class="card-text text-muted">
-                            <ul class="text-muted">
-                                <li>Gravel and crushed stone</li>
-                                <li>Sand and fill materials</li>
-                                <li>Topsoil and compost</li>
-                                <li>Asphalt millings</li>
-                                <li>Construction aggregates</li>
-                                <li>Landscape materials</li>
-                            </ul>
-                        </p>
+                        <p class="card-text text-muted">Prompt delivery of bulk materials for construction, driveway, and landscaping work.</p>
+                        <ul class="text-muted mb-0">
+                            <li>Gravel and crushed stone</li>
+                            <li>Sand and fill materials</li>
+                            <li>Topsoil and compost</li>
+                            <li>Asphalt millings</li>
+                            <li>Construction aggregates</li>
+                            <li>Landscape materials</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -100,6 +158,28 @@
     <div class="container text-center">
         <p class="mb-2 text-muted">Ready to get started on your project?</p>
         <a href="{% url 'core:contact' %}" class="btn btn-warning">Request a Quote</a>
+    </div>
+</section>
+
+<section class="py-5 border-top">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <h2 class="h3 fw-bold mb-4">Service FAQ</h2>
+                <div class="mb-4">
+                    <h3 class="h5 fw-bold">What excavation services do you provide?</h3>
+                    <p class="text-muted mb-0">J. Fisk Construction provides excavation, earth removal, grading, site preparation, foundation excavation, driveway base work, and delivery of aggregate materials.</p>
+                </div>
+                <div class="mb-4">
+                    <h3 class="h5 fw-bold">Do you work on residential and commercial projects?</h3>
+                    <p class="text-muted mb-0">Yes. J. Fisk Construction supports both residential and commercial projects throughout Seekonk and nearby Massachusetts and Rhode Island communities.</p>
+                </div>
+                <div>
+                    <h3 class="h5 fw-bold">How do I request pricing for excavation or earth removal?</h3>
+                    <p class="text-muted mb-0">Call J. Fisk Construction at (508) 399-8570 to discuss the job scope, site conditions, timing, and any delivery or hauling needs.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

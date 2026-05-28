@@ -1,14 +1,69 @@
 {% extends 'base.html' %}
 
-{% block title %}Contact - J. Fisk Construction{% endblock %}
-{% block meta_description %}Contact J. Fisk Construction at (508) 399-8570  72 Pond Street, Seekonk, MA 02771.{% endblock %}
+{% block title %}Contact J. Fisk Construction | Seekonk, MA Excavation & Materials{% endblock %}
+{% block meta_description %}Contact J. Fisk Construction in Seekonk, MA for excavation, earth removal, gravel, loam, stone, and local material delivery. Call (508) 399-8570.{% endblock %}
+{% block og_title %}Contact J. Fisk Construction | Seekonk, MA Excavation & Materials{% endblock %}
+{% block og_description %}Contact J. Fisk Construction in Seekonk, MA for excavation, earth removal, gravel, loam, stone, and local material delivery. Call (508) 399-8570.{% endblock %}
+{% block twitter_title %}Contact J. Fisk Construction | Seekonk, MA Excavation & Materials{% endblock %}
+{% block twitter_description %}Contact J. Fisk Construction in Seekonk, MA for excavation, earth removal, gravel, loam, stone, and local material delivery. Call (508) 399-8570.{% endblock %}
+{% block extra_schema %}
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact J. Fisk Construction",
+        "url": "{{ canonical_url }}",
+        "mainEntity": {
+            "@id": "{{ site_url }}#business"
+        }
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What areas do you serve?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "J. Fisk Construction serves Seekonk and nearby communities in Southeastern Massachusetts and Rhode Island for excavation, earth removal, and material delivery."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the best way to contact J. Fisk Construction?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The fastest way to reach J. Fisk Construction is to call (508) 399-8570 during business hours."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What information should I have ready when I call?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It helps to have your project location, the service or material you need, an estimated quantity, and your preferred timing for the work or delivery."
+                }
+            }
+        ]
+    }
+</script>
+{% endblock %}
 
 {% block content %}
 
 <section class="bg-dark text-white py-5">
     <div class="container">
-        <h1 class="fw-bold">Contact Us</h1>
-        <p class="lead text-secondary">Get in touch to discuss your project or request a quote.</p>
+        <h1 class="fw-bold">Contact J. Fisk Construction</h1>
+        <p class="lead text-secondary">Get in touch to discuss excavation work, earth removal, material delivery, or pricing for your next project.</p>
+    </div>
+</section>
+
+<section class="py-4 border-bottom">
+    <div class="container">
+        <p class="mb-0 text-muted">Call or visit our Seekonk location to ask about excavation services, aggregate delivery, screened loam, stone, processed gravel, and project scheduling in nearby Massachusetts and Rhode Island communities.</p>
     </div>
 </section>
 
@@ -57,6 +112,28 @@
                 </iframe>
             </div>
 
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-5 border-top">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <h2 class="h3 fw-bold mb-4">Contact FAQ</h2>
+                <div class="mb-4">
+                    <h3 class="h5 fw-bold">What areas do you serve?</h3>
+                    <p class="text-muted mb-0">J. Fisk Construction serves Seekonk and nearby communities in Southeastern Massachusetts and Rhode Island for excavation, earth removal, and material delivery.</p>
+                </div>
+                <div class="mb-4">
+                    <h3 class="h5 fw-bold">What is the best way to contact J. Fisk Construction?</h3>
+                    <p class="text-muted mb-0">The fastest way to reach us is to call (508) 399-8570 during business hours.</p>
+                </div>
+                <div>
+                    <h3 class="h5 fw-bold">What information should I have ready when I call?</h3>
+                    <p class="text-muted mb-0">It helps to have your project location, the service or material you need, an estimated quantity, and your preferred timing for the work or delivery.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
