@@ -5,6 +5,6 @@ Services = Earth removal, Excavation, Delivery of products
 
 Contact information:
     (508) 399-8570
-    72 Pond Street, Seekonk, MA 02771
+    68 Woodland Avenue, Seekonk, MA 02771
 
 No em dashes or — anywhere on the site or in the code

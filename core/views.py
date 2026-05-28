@@ -38,7 +38,7 @@ class SeoTemplateView(TemplateView):
                 'canonical_url': f'{SITE_URL}{self.request.path}',
                 'business_phone_display': '(508) 399-8570',
                 'business_phone_link': '+15083998570',
-                'business_street_address': '72 Pond Street',
+                'business_street_address': '68 Woodland Avenue',
                 'business_city': 'Seekonk',
                 'business_state': 'MA',
                 'business_postal_code': '02771',
