@@ -1,3 +1,5 @@
+from datetime import date
+
 from django.views.generic import TemplateView
 
 
@@ -15,6 +17,11 @@ class ServicesView(TemplateView):
 
 class AboutView(TemplateView):
     template_name = 'core/about.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['years_in_business'] = date.today().year - 1975
+        return context
 
 
 class ContactView(TemplateView):

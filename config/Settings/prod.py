@@ -4,7 +4,17 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'].split(',')
+DEFAULT_ALLOWED_HOSTS = [
+    'jfiskconstruction.com',
+    '.jfiskconstruction.com',
+]
+
+env_allowed_hosts = [
+    host.strip()
+    for host in os.environ.get('ALLOWED_HOSTS', '').split(',')
+    if host.strip()
+]
+ALLOWED_HOSTS = list(dict.fromkeys([*DEFAULT_ALLOWED_HOSTS, *env_allowed_hosts]))
 
 # Fail fast if no database is configured
 if not os.environ.get('DATABASE_URL') and not os.environ.get('DB_HOST'):
@@ -30,7 +40,19 @@ WHITENOISE_MANIFEST_STRICT = False
 # Persistent DB connections
 CONN_MAX_AGE = 60
 
-CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', '').split(',')
+DEFAULT_CSRF_TRUSTED_ORIGINS = [
+    'https://jfiskconstruction.com',
+    'https://www.jfiskconstruction.com',
+]
+
+env_csrf_trusted_origins = [
+    origin.strip()
+    for origin in os.environ.get('CSRF_TRUSTED_ORIGINS', '').split(',')
+    if origin.strip()
+]
+CSRF_TRUSTED_ORIGINS = list(
+    dict.fromkeys([*DEFAULT_CSRF_TRUSTED_ORIGINS, *env_csrf_trusted_origins])
+)
 
 # Uses LocMemCache from base.py — sufficient for a low-traffic marketing site
 
